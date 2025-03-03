@@ -1,0 +1,14 @@
+Language: Cpp
+BasedOnStyle: Chromium
+Standard: c++17
+
+ColumnLimit: 80
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+AlignAfterOpenBracket: BlockIndent
+BinPackArguments: false
+BinPackParameters: false
+BreakAfterReturnType: All
+IndentAccessModifiers: true
