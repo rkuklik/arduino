@@ -2,7 +2,7 @@
   pkgs ? import <nixpkgs>,
 }:
 let
-  flags = flag: values: map (val: flag + val) values;
+  flags = flag: map (val: flag + val);
   includes = map (path: "${pkgs.arduino-core-unwrapped}/share/arduino/hardware/${path}") [
     "tools/avr/avr/include"
     "arduino/avr/cores/arduino"
@@ -25,7 +25,7 @@ let
       "-nostdlibinc"
       "-nostdinc++"
       "-xc++"
-      "-std=c++17"
+      "-std=c++11"
     ]
     ++ baseflag
   );
